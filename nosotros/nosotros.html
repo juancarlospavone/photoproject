@@ -1,0 +1,166 @@
+<!Doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="../estilos/main.css">
+        <link href="https://fonts.googleapis.com/css?family=Spicy+Rice&display=swap" rel="stylesheet">
+    </head>
+    <body background="../img/fotos/Quienes_somos/fondo.jpg">
+
+
+	<nav>
+
+	<a href="../index.html">
+	<img class="boton-home" src="../img/photoproject.png">
+	
+	</a>
+
+	<ul id="menu">
+		<li><a href="../index.html">Home</a></li> <!--Página principal -->
+		<li><a href="../portafolio/portafolio.html">Portfolio</a></li> <!--Fotos de los proyectos -->
+		<li><a href="../video/video.html">Video</a></li> <!--Video del proyecto -->
+		<li><a href="nosotros.html">¿Quiénes somos?</a></li> <!--Nuestra información -->
+		<li class="contacto"><a href="../formulario/formulario.html">Contacto</a></li><!--Enlace al correo de la empresa -->
+		<li>
+            <a href="#">Servicios</a>
+            <ul>
+                <li><a href="../tienda/tienda.html">Tienda</a></li>
+                <li><a href="../proyecto/proyecto.html">Proyectos</a></li>
+            </ul>
+        </li>
+            <!-- Link de descarga de imágenes -->
+	</ul>
+
+	</nav>
+
+
+			<!--Imagen del centro con animaciones -->
+			<div class="cuerpo">
+   <h1>INTEGRANTES</h1>
+                </div>
+    <p class="texto-somos">Somos una empresa dedicada a la fotografia y a los cortometrajes personalizados para aquellas personas que deseen tener no solo un recuerdo en su memoria sino tambien un recuerdo que no se puede borrar. Con más de 15 años de experiencia, nuestros equipo de fotografía y diseño han hecho proyectos de todo tipo de eventos y en más de un tercio de los paises mundiales.</p>
+    <p class="texto-somos">Nuestra empresa a sido acusada varias veces por temeridad por parte de la competencia, pero a su vez, el resultado de esta temeridad a sido recompensado con imagenes de valor incalculable.</p>
+    <div class="slider-gallery">
+            <img class="Slider" src="../img/fotos/Fotografos/consejos-fotograficos-fotografos-tips-portada-fotografo-profesional-pro-810x540.jpg">
+            <img class="Slider" src="../img/fotografo2.jpeg">
+            <img class="Slider" src="../img/fotografo3.png">
+            <img class="Slider" src="../img/fotografo4.jpg">
+        </div>
+        
+        <div id="slider-buttons">
+            <button class="w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+            <button class="w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
+        </div>
+        
+        <script>
+            
+           
+var slideIndex = 1; //Primero, se establece slideIndex en 1. (Primera imagen)
+showDivs(slideIndex); //Luego se llama a la funcion showDivs() para mostrar la primera imagen.
+
+function plusDivs(n) {
+ //Cuando hacemos clic en uno de los botones, llama a plusDivs().
+ //La función plusDivs () resta uno o agrega uno al slideIndex.
+  showDivs(slideIndex += n); 
+}
+
+function showDivs(n) {
+    //La función showDiv () oculta (display = "none") todos los elementos con el nombre de clase "Slider", y muestra (display = "block") el elemento con el slideIndex dado.
+  var i;
+  var x = document.getElementsByClassName("Slider");  
+
+  if (n > x.length) { //Si slideIndex es mayor que el número de elementos o imagenes (x.length), slideIndex se establece en cero (se reinicia).
+
+        slideIndex = 1;
+
+    }
+
+
+  if (n < 1) {  //Si slideIndex es menor que 1, se reestablece el número de elementos o imagenes (x.length).
+
+        slideIndex = x.length; 
+
+    }
+
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+
+            
+var slideIndex = 0;
+carousel();
+            
+function carousel() {
+    //En la funcion showDivs() nos permitia cambiar las diapositivas de modo manual, esta funcion carousel() hace que las diapositivas cambien cada 4 segundos. 
+    //Estamos usando las 2 funciones a la vez para que se muestren automáticamente las imagenes en caso de que el ususario no las cambie 
+    var i;
+    var x = document.getElementsByClassName("Slider");
+    for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > x.length) {
+
+        slideIndex = 1;
+
+    }
+    x[slideIndex-1].style.display = "block";
+    setTimeout(carousel, 4000); 
+}
+        </script>
+        
+
+		
+
+
+    
+
+    <p class="texto-nosotros">Photoproject ya ha contado con mas de 1.000 proyectos de los cuales el 95% de los dichos, han sido satisfactorios para nuestros clientes.</p>
+        
+        
+        
+        
+        
+
+
+<footer> <!--Sección abajo del container -->
+	<address>
+		
+		<p>Universidad Europea de Madrid.
+            Campus Villaviciosa de Odón.  
+            Calle Tajo S/N Villaviciosa de Odón. Madrid 
+            TLF: 91 211 56 73</p>
+        
+		<iframe class="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3039.614799775046!2d-3.9212714851068493!3d40.37306476621887!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd419031a94d45e5%3A0x375a8b6ca7a1dc4c!2sUniversidad%20Europea%20de%20Madrid%20(Campus%20Villaviciosa%20de%20Od%C3%B3n)!5e0!3m2!1ses!2ses!4v1582650535074!5m2!1ses!2ses"></iframe>
+
+	</address>
+
+	<div class="integrantes"> 
+
+		<p>David Elvira</p>
+		<p>Juan Carlos Pavone</p>
+		<p>Pablo Redondo</p>
+		<p>Carlos López</p>
+		<br>
+		<p>© Copyright 2020  - Todos los derechos reservados</p>
+
+	</div>
+
+	<section> <!--Redes sociales de la empresa -->
+		
+    <a href="#"><img src="../img/whatsapp.png"></a> 
+    <a href="#"><img src="../img/instagram.png"></a>
+    <a href="#"><img src="../img/youtube.png"></a>
+    <br>
+    <h2>Links</h2>
+    <a href="../formulario/formulario.html" class="formulario-contacto"><p>Formulario de contacto</p></a> <!--Aquí va el formulario -->
+
+	</section>
+
+
+
+</footer>
+
+    </body>
+</html>

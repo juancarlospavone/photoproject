@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <link rel="stylesheet" type="text/css" href="../estilos/main.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link href="https://fonts.googleapis.com/css?family=Spicy+Rice&display=swap" rel="stylesheet">
+    <script type="text/javascript">
+function validateForm() {
+  var x = document.forms["formulario"]["nombre"].value;
+  var y = document.forms["formulario"]["apellidos"].value;
+  var z = document.forms["formulario"]["descripcion"].value;
+  if (x == "") {  //Si el espacio es en blanco, mostrará una alerta y el formulario no se enviará
+
+    alert("Completa el nombre");
+
+    return false;
+
+  } else if (y == "") {
+
+    alert("Favor rellenar la casilla de Apellidos");
+
+    return false;
+
+  } else if (z.length<10) {
+
+    alert("Favor rellenar la casilla de Descripción");
+
+    return false;
+
+  } 
+
+  var expresionEmail = /^(.+\@.+\..+)$/;
+  if (expresionEmail.test(formulario.correo.value)==false) {
+
+    alert("El email no es válido");
+    return false;
+
+  }  else {
+
+    alert("Gracias por llenar los campos, en breve le contactaremos");
+    return true;
+
+  }
+
+
+} 
+
+
+ </script>
+    <title>Contacto</title>
+    
+</head>
+<body class="form" background="../img/fotos/Contacto/fondo.jpg">
+
+
+<div class="container"> <!--Aquí agrupa el header (primera caja donde está el menú y el logo) y section -->
+
+  <nav>
+
+  <a href="../index.html">
+  <img class="boton-home" src="../img/photoproject.png">
+  
+  </a>
+	<ul id="menu">
+		<li><a href="../index.html">Home</a></li> <!--Página principal -->
+		<li><a href="../portafolio/portafolio.html">Portfolio</a></li> <!--Fotos de los proyectos -->
+		<li><a href="../video/video.html">Video</a></li> <!--Video del proyecto -->
+		<li><a href="../nosotros/nosotros.html">¿Quiénes somos?</a></li> <!--Nuestra información -->
+		<li class="contacto"><a href="formulario.html">Contacto</a></li><!--Enlace al correo de la empresa -->
+		<li>
+            <a href="#">Servicios</a>
+            <ul>
+                <li><a href="../tienda/tienda.html">Tienda</a></li>
+                <li><a href="../proyecto/proyecto.html">Proyectos</a></li>
+            </ul>
+        </li>
+            <!-- Link de descarga de imágenes -->
+	</ul>
+
+  </nav>
+
+</div>
+
+<div class="cuerpo">
+   
+<h1 class="titulo">CONTACTO</h1> 
+    </div>  
+<form class="formulario" name="formulario" action="mailto:raul.rodriguez@universidadeuropea.es" method="get" onsubmit="return validateForm()">
+   Nombre: <input name="nombre" type="text" maxlength="50" placeholder="Tu nombre"><br><br>
+   Apellidos: <input name="apellidos" type="text" maxlength="50" placeholder="Tus Apellidos"><br><br>
+   Fecha de nacimiento: <input type="date" name="fechanacimiento">
+   <br><br>
+   Consulta sobre: <select name="consulta">
+
+      <option value="Fotos"> Galería de fotos</option>
+      <option value="Vídeo"> Galería de vídeos</option>
+
+    </select><br><br>
+   Correo electrónico: <input name="correo" type="email" size="40"><br><br>
+   Intereses: <select name="Interes">
+
+      <option value="Retrato"> Retrato</option>
+      <option value="Eventos"> Eventos</option>
+      <option value="Deporte"> Deporte</option>
+      <option value="Paisaje"> Paisaje</option>
+      <option value="Fauna"> Fauna</option>
+      <option value="Flora"> Flora</option>
+
+   </select><br><br>
+   Descripción: <textarea name="descripcion" rows="5"></textarea><br><br>
+   <input name="novedades" type="checkbox" checked >Deseo  recibir  información  sobre  novedades  y ofertas <br><br>
+   <input name="novedades" type="checkbox" required>Declaro  haber  leído y  aceptado  las  condiciones generales del programa y la normativa sobre protección de datos <br><br>
+   <input type="submit" value="Enviar">
+ </form>
+
+<footer> <!--Sección abajo del container -->
+	<address>
+		
+		<p>Universidad Europea de Madrid.
+            Campus Villaviciosa de Odón.  
+            Calle Tajo S/N Villaviciosa de Odón. Madrid 
+            TLF: 91 211 56 73</p>
+        
+		<iframe class="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3039.614799775046!2d-3.9212714851068493!3d40.37306476621887!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd419031a94d45e5%3A0x375a8b6ca7a1dc4c!2sUniversidad%20Europea%20de%20Madrid%20(Campus%20Villaviciosa%20de%20Od%C3%B3n)!5e0!3m2!1ses!2ses!4v1582650535074!5m2!1ses!2ses"></iframe>
+
+	</address>
+
+	<div class="integrantes"> 
+
+		<p>David Elvira</p>
+		<p>Juan Carlos Pavone</p>
+		<p>Pablo Redondo</p>
+		<p>Carlos López</p>
+		<br>
+		<p>© Copyright 2020  - Todos los derechos reservados</p>
+
+	</div>
+
+	<section> <!--Redes sociales de la empresa -->
+		
+    <a href="#"><img src="../img/whatsapp.png"></a> 
+    <a href="#"><img src="../img/instagram.png"></a>
+    <a href="#"><img src="../img/youtube.png"></a>
+    <br>
+    <h2>Links</h2>
+    <a href="formulario.html" class="formulario-contacto"><p>Formulario de contacto</p></a> <!--Aquí va el formulario -->
+
+	</section>
+
+
+
+</footer>
+
+
+</body>
+</html>
